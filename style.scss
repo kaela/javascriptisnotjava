@@ -1,0 +1,57 @@
+---
+---
+
+/********** Imports **********/
+
+@import "_reset";
+@import "_variables";
+@import "_mixins";
+@import "_highlights";
+@import "_typography";
+@import "_base";
+@import "_header";
+@import "_footer";
+
+
+/********** Global Styling **********/
+article { 
+  @include radius($pad);
+  background: $bg;
+  padding: $pad;
+}
+
+blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid red;
+  padding: 0.1em 1em;
+  color: red;
+  font-size: 22px;
+  font-style: italic;
+}
+
+
+/********** Layout/Sections **********/
+.container {
+    margin: 0 auto;
+    max-width: 740px;
+    overflow: hidden;
+    width: 100%;
+}
+.content { background: $bg; padding: 0 $pad; }
+
+.active   { background: $bg; }
+.date     { font-style: italic; color: $text; margin-top: 5px; }
+.post     { margin-top: $pad*2; }
+.comments { margin-top: $pad; }
+
+.comparisons { 
+  @include font-size(2); 
+  list-style: none;
+  padding-left: 0;
+}
+.comparisons .titlefont { 
+  @include font-size(2.6); 
+  color: $highlight; 
+  padding: 0 5px;
+}
+
