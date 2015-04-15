@@ -1,4 +1,4 @@
-sassyhtml
+JavaScript is Not Java
 =========================
 
-A guide for html, css, js, other languages, and their frameworks
+An illustration of the differences between the two programming languages.
