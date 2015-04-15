@@ -1,8 +1,9 @@
 @import "_variables.scss";
 
 /********** Header **********/
+header { background: $bg; }
 nav { 
-	background: $text; 
+	background: $text;
 	color: $bg; 
 	height: $navheight;
 	padding: 0 $pad; 

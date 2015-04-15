@@ -1,7 +1,7 @@
 @import "_variables.scss";
 
-html { background: $bg; font-size: 62.5% }
-body { background: $bg; font: 1.6em $font; text-align: center; }
+html { background: $text; font-size: 62.5% }
+body { background: $text; font: 2em $font; text-align: center; }
 
 body, select, input, textarea {
   color: $text;

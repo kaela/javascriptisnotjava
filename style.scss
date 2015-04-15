@@ -37,7 +37,7 @@ blockquote {
     overflow: hidden;
     width: 100%;
 }
-.content { background: $bg; padding: 0 $pad; }
+.content { background: $bg; padding: 0 $pad $pad*2 $pad; }
 
 .active   { background: $bg; }
 .date     { font-style: italic; color: $text; margin-top: 5px; }

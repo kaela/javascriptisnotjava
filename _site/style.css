@@ -449,13 +449,13 @@ a {
 /********** Variables **********/
 /********** Font Stack **********/
 html {
-  background: #333333;
+  background: #FFFFFF;
   font-size: 62.5%;
 }
 
 body {
-  background: #333333;
-  font: 1.6em "EB Garamond", serif;
+  background: #FFFFFF;
+  font: 2em "EB Garamond", serif;
   text-align: center;
 }
 
@@ -560,6 +560,10 @@ pre:before {
 /********** Variables **********/
 /********** Font Stack **********/
 /********** Header **********/
+header {
+  background: #333333;
+}
+
 nav {
   background: #FFFFFF;
   color: #333333;
@@ -649,10 +653,6 @@ nav {
 /********** Colors **********/
 /********** Variables **********/
 /********** Font Stack **********/
-.wrapper-footer {
-  margin-top: 30px;
-}
-
 footer {
   padding: 15px 0;
   text-align: center;
@@ -696,7 +696,7 @@ blockquote {
 
 .content {
   background: #333333;
-  padding: 0 15px;
+  padding: 0 15px 30px 15px;
 }
 
 .active {
