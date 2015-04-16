@@ -47,7 +47,7 @@ nav {
 .title>.isnot 	  { @include font-size(8); }
 
 .title>.titlefont {
-    
+    margin-bottom: 10px;
     position: relative;
     text-align: center;
     z-index: 1; 

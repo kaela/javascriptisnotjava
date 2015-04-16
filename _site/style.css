@@ -456,6 +456,7 @@ html {
 body {
   background: #FFFFFF;
   font: 2em "EB Garamond", serif;
+  min-width: 320px;
   text-align: center;
 }
 
@@ -627,6 +628,7 @@ nav {
 }
 
 .title > .titlefont {
+  margin-bottom: 10px;
   position: relative;
   text-align: center;
   z-index: 1;
@@ -660,7 +662,7 @@ footer {
 footer > a {
   background: #31a887;
   display: inline-block;
-  padding: 2px 5px 3px;
+  padding: 2px 5px 0px;
 }
 footer > a:hover {
   background: #2b9577;
