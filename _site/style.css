@@ -604,7 +604,7 @@ nav {
   color: #333333;
   line-height: 15px;
   border-bottom: 1px solid #333333;
-  padding-bottom: 0px;
+  padding-bottom: 4px;
   margin-top: 18px;
 }
 .navitem:first-of-type {
