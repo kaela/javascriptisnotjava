@@ -455,13 +455,13 @@ html {
 
 body {
   background: #FFFFFF;
+  color: #FFFFFF;
   font: 2em "EB Garamond", serif;
   min-width: 320px;
   text-align: center;
 }
 
 body, select, input, textarea {
-  color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -663,9 +663,19 @@ footer > a {
   background: #31a887;
   display: inline-block;
   padding: 2px 5px 0px;
+  vertical-align: top;
 }
 footer > a:hover {
   background: #2b9577;
+}
+
+.fa.footer-icon {
+  font-size: 24px;
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  height: 46px;
+  width: 40px;
+  line-height: 42px;
 }
 
 /********** Global Styling **********/
@@ -685,6 +695,13 @@ blockquote {
   padding: 0.1em 1em;
   color: red;
   font-size: 22px;
+  font-style: italic;
+}
+
+.note {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #333333;
   font-style: italic;
 }
 
@@ -719,10 +736,47 @@ blockquote {
   margin-top: 15px;
 }
 
+/********** Comparisons **********/
+.listStuff {
+  color: #999999;
+}
+
+.arrows {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-right: 5px;
+  display: none;
+}
+
+.name {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  line-height: 34px;
+  opacity: 0;
+  position: absolute;
+}
+@media screen and (max-width: 640px) {
+  .name {
+    display: none;
+  }
+}
+
+.comparisons > li {
+  cursor: alias;
+}
+
+.comparisons > li:hover > .name {
+  opacity: 1;
+}
+
 .comparisons {
   font-size: 20px;
   font-size: 2rem;
   list-style: none;
+  margin: 0;
   padding-left: 0;
 }
 
@@ -731,4 +785,87 @@ blockquote {
   font-size: 2.6rem;
   color: #37BC97;
   padding: 0 5px;
+  text-transform: lowercase;
+}
+
+.compare-form {
+  margin-top: 15px;
+}
+
+.compare-word {
+  font-size: 26px;
+  font-size: 2.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: rgba(255, 255, 255, 0.2) 1px solid;
+  color: #37BC97;
+  font-family: "Dancing Script", cursive;
+  line-height: 40px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  width: 200px;
+}
+@media screen and (max-width: 640px) {
+  .compare-word {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.compare-submit[disabled] {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+.compare-submit[disabled]:hover {
+  background-color: #37BC97;
+  opacity: 0.1;
+}
+
+.compare-text {
+  display: inline;
+  line-height: 40px;
+  margin: 0 15px;
+}
+@media screen and (max-width: 640px) {
+  .compare-text {
+    display: block;
+  }
+}
+
+.compare-submit {
+  font-size: 30px;
+  font-size: 3rem;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  line-height: 26px;
+  background: #37BC97;
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "EB Garamond", serif;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 15px;
+  padding: 0 5px;
+  vertical-align: top;
+}
+.compare-submit:hover {
+  background-color: #206d58;
+}
+@media screen and (max-width: 640px) {
+  .compare-submit {
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+  }
+}
+
+.alert-error {
+  background: rgba(55, 188, 151, 0.1);
+  border: rgba(55, 188, 151, 0.3) 1px solid;
+  display: none;
+  margin: 0;
+  padding: 5px 0;
 }

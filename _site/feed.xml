@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript is not Java</title>
-    <description>JavaScript is to Java as hamster is to ham.</description>
+    <description>A humorous comparison of JavaScript and Java.</description>
     <link>http://javascriptisnotjava</link>
     <atom:link href="http://javascriptisnotjava/feed.xml" rel="self" type="application/rss+xml" />
     

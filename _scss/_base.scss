@@ -3,13 +3,12 @@
 html { background: $text; font-size: 62.5% }
 body { 
   background: $text; 
+  color: $text;
   font: 2em $font; 
   min-width: 320px;
   text-align: center; 
 }
-
 body, select, input, textarea {
-  color: $text;
   -webkit-font-smoothing: antialiased; 
   -moz-osx-font-smoothing: grayscale;
 }
