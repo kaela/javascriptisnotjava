@@ -4,7 +4,12 @@ Parse.initialize("OewNDg3ea25QQf3Nzg8nnS1sux0KlgviJK3SB8c1", "WLjv5CwGASQf9pONJq
 var Analogy		= Parse.Object.extend("Analogies");
 var query 		= new Parse.Query(Analogy);
 
-query.descending('createdAt').notEqualTo("visible", false);
+var badWords    = ["fuck", "shit", "bitch", "penis", "blowjob", "ass", "dick", "sex"];
+
+query.descending('createdAt')
+	.notEqualTo("visible", false)
+	.notContainedIn("firstWord", badWords)
+	.notContainedIn("lastWord", badWords);
 
 var AnalogyCollection = Parse.Collection.extend({
 	model: Analogy,
@@ -113,9 +118,12 @@ $('.compare-submit').click(function(e){
 	e.preventDefault();
 	$('#alert').hide().slideUp();
 
+	var firstEntry = $('#firstWord').val();
+	var lastEntry = $('#lastWord').val();
+
 	var query = new Parse.Query(Analogy);
 
-	query.equalTo("firstWord", $('#firstWord').val()).equalTo("lastWord", $('#lastWord').val());
+	query.equalTo("firstWord", firstEntry).equalTo("lastWord", lastEntry);
 	
 	query.find({
 	  success: function(results) {
@@ -129,10 +137,27 @@ $('.compare-submit').click(function(e){
 			});
 
 			newAnalogy.save(null, {
-				success: function(newAnalogy) {				
-					$('#comparisons').prepend('<li><span class="titlefont">' +
-					newAnalogy.get('firstWord') + '</span>is to<span class="titlefont">' + 
-		      		newAnalogy.get('lastWord') + '</span></li>');
+				success: function(newAnalogy) {
+					var questionableCount = 0;
+					for(var i = 0; i < badWords.length; i++) {
+						if(firstEntry == badWords[i] || lastEntry == badWords[i]) {
+							questionableCount++;
+						} 
+					}
+
+					if(questionableCount < 1) {		
+						$('#comparisons').prepend('<li><span class="titlefont">' +
+						newAnalogy.get('firstWord') + '</span>is to<span class="titlefont">' + 
+			      		newAnalogy.get('lastWord') + '</span></li>');
+
+						console.log('good to go');
+
+					} else {
+						$('#alert').html("hmm... not sure about that one... I need to take a look at it before displaying it on this site.")
+								.show().slideDown();
+
+						console.log('hiding that one');
+					}
 				},
 				error: function(newAnalogy, error) {
 					console.log("Error: " + error);
