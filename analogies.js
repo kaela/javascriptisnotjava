@@ -4,7 +4,7 @@ Parse.initialize("OewNDg3ea25QQf3Nzg8nnS1sux0KlgviJK3SB8c1", "WLjv5CwGASQf9pONJq
 var Analogy		= Parse.Object.extend("Analogies");
 var query 		= new Parse.Query(Analogy);
 
-query.descending('createdAt');
+query.descending('createdAt').notEqualTo("visible", false);
 
 var AnalogyCollection = Parse.Collection.extend({
 	model: Analogy,
@@ -65,17 +65,26 @@ $(".js-wordInput").on("input", function(){
 /* loop through lastwords 
  * check if lastWord == any of those 
  */
-analogiesCollection.fetch().then(function(collection) {
-	var analogies = collection.toJSON();
+$("#lastWord").on("keyup", function(e) {
+	var query = new Parse.Query(Analogy);
 
-	$("#lastWord").on("keyup", function(e) {
-		for(var i = 0; i < analogies.length; i++) {
-			if ($('#lastWord').val() == analogies[i].lastWord) {
-				console.log("Looks like we've got a dupe.");
-				$('.compare-submit').attr('disabled', true);
-				$('#alert').show().slideDown();
-			} 
-		}
+	query.equalTo("firstWord", $('#firstWord').val()).equalTo("lastWord", $('#lastWord').val());
+	
+	query.find({
+	  success: function(results) {
+	    console.log(results.length);
+
+	    for (var i = 0; i < results.length; i++) { 
+	      var object = results[i];
+	      console.log(object.get('firstWord') + ' is to ' + object.get('lastWord'));
+	      
+	      $('.compare-submit').attr('disabled', true);
+	  	  $('#alert').show().slideDown();
+	    }
+	  },
+	  error: function(error) {
+	    alert("Error: " + error.code + " " + error.message);
+	  }
 	});
 });
 
@@ -102,31 +111,42 @@ $("#lastWord").on("keyup", function (e){
 
 $('.compare-submit').click(function(e){
 	e.preventDefault();
-	var firstWord = $('#firstWord').val();
-	var lastWord =  $('#lastWord').val();
 	$('#alert').hide().slideUp();
 
-	if(true) {
-		var newAnalogy = new Analogy({
-			firstWord: $('#firstWord').val().toLowerCase(),
-			lastWord: $('#lastWord').val().toLowerCase(),
-			name: $('#name').val(),
-		});
+	var query = new Parse.Query(Analogy);
 
-		newAnalogy.save(null, {
-			success: function(newAnalogy) {				
-				$('#comparisons').prepend('<li><span class="titlefont">' +
-				newAnalogy.get('firstWord') + '</span>is to<span class="titlefont">' + 
-	      		newAnalogy.get('lastWord') + '</span></li>');
-			},
-			error: function(newAnalogy, error) {
-				console.log("Error: " + error);
-			}
-		});	
-	} else {
-		console.log("entry didn't meet reqs");
-		$('#alert').show().slideDown();
-	}	
+	query.equalTo("firstWord", $('#firstWord').val()).equalTo("lastWord", $('#lastWord').val());
+	
+	query.find({
+	  success: function(results) {
+	  	console.log("length: " + results.length);
+
+	  	if(results.length === 0) {
+		  	var newAnalogy = new Analogy({
+				firstWord: $('#firstWord').val().toLowerCase(),
+				lastWord: $('#lastWord').val().toLowerCase(),
+				name: $('#name').val(),
+			});
+
+			newAnalogy.save(null, {
+				success: function(newAnalogy) {				
+					$('#comparisons').prepend('<li><span class="titlefont">' +
+					newAnalogy.get('firstWord') + '</span>is to<span class="titlefont">' + 
+		      		newAnalogy.get('lastWord') + '</span></li>');
+				},
+				error: function(newAnalogy, error) {
+					console.log("Error: " + error);
+				}
+			});
+		} else {
+			$('.compare-submit').attr('disabled', true);
+	  		$('#alert').show().slideDown();
+		}	 
+	  },
+	  error: function(error) {
+	    alert("Error: " + error.code + " " + error.message);
+	  }
+	});	
 })
 
 

@@ -2,37 +2,37 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://javascriptisnotjava/404.html</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://javascriptisnotjava/about/</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://javascriptisnotjava/snippets/css/</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://javascriptisnotjava/</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://javascriptisnotjava/snippets/</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://javascriptisnotjava/snippets/wordpress/</loc>
-    <lastmod>2015-04-25T22:35:53-07:00</lastmod>
+    <lastmod>2015-04-29T22:07:53-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
