@@ -1,15 +1,15 @@
 @import "_variables.scss";
 
 html { background: $text; font-size: 62.5% }
-body { 
-  background: $text; 
+body {
+  background: $text;
   color: $text;
-  font: 2em $font; 
+  font: 2em $font;
   min-width: 320px;
-  text-align: center; 
+  text-align: center;
 }
 body, select, input, textarea {
-  -webkit-font-smoothing: antialiased; 
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i { font-style: inherit; }
@@ -41,12 +41,12 @@ pre.language-wp:before   { content: 'WordPress'; }
 pre {
   -webkit-font-smoothing: subpixel-antialiased;
   white-space: pre-wrap;
-  background: #333;
-  color: #fff;
+  background: $bg;
+  color: $text;
   display: block;
   padding: 0 $pad $pad $pad;
   margin: $pad 0;
-    
+
   &:before {
     @include font-size(2);
     background: $bg;
