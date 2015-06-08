@@ -14,21 +14,13 @@
 
 
 /********** Global Styling **********/
-article { 
+article {
   @include radius($pad);
   background: $bg;
   padding: $pad;
 }
 
-blockquote {
-  margin: 1.8em .8em;
-  border-left: 2px solid red;
-  padding: 0.1em 1em;
-  color: red;
-  font-size: 22px;
-  font-style: italic;
-}
-.note { 
+.note {
   @include font-size(1.6);
   color: $bg;
   font-style: italic;
@@ -51,15 +43,15 @@ blockquote {
 
 
 /********** Comparisons **********/
-.listStuff { 
-  color: #999999;  
+.listStuff {
+  color: #999999;
 }
 .arrows {
   @include font-size(1.4);
   margin-right: 5px;
   display: none;
 }
-.name { 
+.name {
   @include transition(opacity, 0.3s, ease);
   line-height: 34px;
   opacity: 0;
@@ -71,28 +63,28 @@ blockquote {
 .comparisons>li { cursor: alias; }
 .comparisons>li:hover>.name { opacity: 1; }
 
-.comparisons { 
-  @include font-size(2); 
+.comparisons {
+  @include font-size(2);
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.comparisons .titlefont { 
-  @include font-size(2.6); 
-  color: $highlight; 
+.comparisons .titlefont {
+  @include font-size(2.6);
+  color: $highlight;
   padding: 0 5px;
   text-transform: lowercase;
 }
 .compare-form { margin-top: $pad; }
 
-.compare-word { 
+.compare-word {
   @include font-size(2.6);
   background: rgba(255,255,255,0.1);
   border: rgba(255, 255, 255, 0.2) 1px solid;
   color: $highlight;
   font-family: $titlefont;
   line-height: $touch;
-  margin-bottom: $pad; 
+  margin-bottom: $pad;
   padding: 0 $pad;
   width: 200px;
   @include mobile {
@@ -100,16 +92,16 @@ blockquote {
     width: 100%;
   }
 }
-.compare-submit[disabled] { 
+.compare-submit[disabled] {
   opacity: 0.1;
-  cursor: not-allowed; 
+  cursor: not-allowed;
   &:hover { background-color: $highlight; opacity: 0.1; }
 }
 
-.compare-text { 
-  display: inline; 
+.compare-text {
+  display: inline;
   line-height: $touch;
-  margin: 0 $pad; 
+  margin: 0 $pad;
   @include mobile {
     display: block;
   }
@@ -138,10 +130,10 @@ blockquote {
 }
 
 
-.alert-error { 
+.alert-error {
   background: rgba($highlight, 0.1);
   border: rgba($highlight, 0.3) 1px solid;
-  display: none; 
+  display: none;
   margin: 0;
   padding: 5px 0;
 }

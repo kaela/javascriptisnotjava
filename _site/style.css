@@ -351,15 +351,6 @@ article {
   padding: 15px;
 }
 
-blockquote {
-  margin: 1.8em .8em;
-  border-left: 2px solid red;
-  padding: 0.1em 1em;
-  color: red;
-  font-size: 22px;
-  font-style: italic;
-}
-
 .note {
   font-size: 16px;
   font-size: 1.6rem;
