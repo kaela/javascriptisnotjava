@@ -32,7 +32,7 @@ img {
 /********** Variables **********/
 /********** Font Stack **********/
 .highlight {
-  background-color: #FFFFFF;
+  background-color: #fff;
   padding: 5px 10px;
   margin: 20px 0;
 }
@@ -111,13 +111,13 @@ a {
 /********** Variables **********/
 /********** Font Stack **********/
 html {
-  background: #FFFFFF;
+  background: #fff;
   font-size: 62.5%;
 }
 
 body {
-  background: #FFFFFF;
-  color: #FFFFFF;
+  background: #fff;
+  color: #fff;
   font: 2em "EB Garamond", serif;
   min-width: 320px;
   text-align: center;
@@ -155,12 +155,12 @@ ul ul, ol ul {
 }
 
 ::-moz-selection {
-  color: #FFFFFF;
+  color: #fff;
   background: #333333;
 }
 
 ::selection {
-  color: #FFFFFF;
+  color: #fff;
   background: #333333;
 }
 
@@ -203,7 +203,7 @@ pre {
   -webkit-font-smoothing: subpixel-antialiased;
   white-space: pre-wrap;
   background: #333333;
-  color: #FFFFFF;
+  color: #fff;
   display: block;
   padding: 0 15px 15px 15px;
   margin: 15px 0;
@@ -212,7 +212,7 @@ pre:before {
   font-size: 20px;
   font-size: 2rem;
   background: #333333;
-  color: #FFFFFF;
+  color: #fff;
   display: block;
   line-height: 30px;
   margin: auto -15px;
@@ -228,7 +228,7 @@ header {
 }
 
 nav {
-  background: #FFFFFF;
+  background: #fff;
   color: #333333;
   height: 50px;
   padding: 0 15px;
@@ -242,7 +242,7 @@ nav {
   -o-border-radius: 50%;
   border-radius: 50%;
   background: #37BC97;
-  color: #FFFFFF;
+  color: #fff;
   display: block;
   height: 40px;
   width: 40px;
@@ -334,7 +334,7 @@ footer > a:hover {
 .fa.footer-icon {
   font-size: 24px;
   font-size: 2.4rem;
-  color: #FFFFFF;
+  color: #fff;
   height: 46px;
   width: 40px;
   line-height: 42px;
@@ -377,7 +377,7 @@ article {
 
 .date {
   font-style: italic;
-  color: #FFFFFF;
+  color: #fff;
   margin-top: 5px;
 }
 
@@ -495,7 +495,7 @@ article {
   line-height: 26px;
   background: #37BC97;
   border: 0;
-  color: #FFFFFF;
+  color: #fff;
   cursor: pointer;
   font-family: "EB Garamond", serif;
   height: 40px;
