@@ -9,7 +9,7 @@ An illustration of the differences between the two programming languages.
 ## Get Started
 
 ```bash
-# TODO - complete when available: git clone @--
+git clone https://github.com/kaela/javascriptisnotjava.git
 cd javascriptisnotjava
 yarn dev
 ```
