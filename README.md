@@ -14,6 +14,10 @@ cd javascriptisnotjava
 yarn dev
 ```
 
+## To build
+
+Run `yarn build`
+
 Open up http://localhost:3000
 
 This project uses:

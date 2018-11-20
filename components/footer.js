@@ -40,10 +40,10 @@ const Footer = () => (
     <Content>
       <SocialIcons>
         <SocialLink href="http://linkedin.com/in/kaelanichols" title="linkedin">
-          <img src="/static/assets/linkedin.svg" alt="LinkedIn" />
+          <img src="static/assets/linkedin.svg" alt="LinkedIn" />
         </SocialLink>
         <SocialLink href="http://github.com/kaela" title="github">
-          <img src="/static/assets/github.svg" alt="github" />
+          <img src="static/assets/github.svg" alt="github" />
         </SocialLink>
       </SocialIcons>
       <P>

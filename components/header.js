@@ -69,7 +69,7 @@ const Header = () => (
         href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
         title="What is JavaScript?"
       />
-      <Logo src="/static/assets/logo.svg" alt="JavaScript is not Java logo" />;
+      <Logo src="static/assets/logo.svg" alt="JavaScript is not Java logo" />;
       <HeaderLink
         href="https://java.com/en/download/faq/whatis_java.xml"
         title="What is Java?"
