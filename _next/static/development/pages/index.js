@@ -311,7 +311,7 @@ var Footer = function Footer() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/static/assets/linkedin.svg",
+    src: "static/assets/linkedin.svg",
     alt: "LinkedIn",
     __source: {
       fileName: _jsxFileName,
@@ -327,7 +327,7 @@ var Footer = function Footer() {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/static/assets/github.svg",
+    src: "static/assets/github.svg",
     alt: "github",
     __source: {
       fileName: _jsxFileName,
@@ -466,7 +466,7 @@ var Header = function Header() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
-    src: "/static/assets/logo.svg",
+    src: "static/assets/logo.svg",
     alt: "JavaScript is not Java logo",
     __source: {
       fileName: _jsxFileName,
