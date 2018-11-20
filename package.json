@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
