@@ -48,7 +48,7 @@ This project uses:
   next build && next export &&
   touch out/.nojekyll  &&
   touch out/CNAME &&
-  echo \"javascriptisnotjava.io\" >> out/CNAME &&
+  echo \"javascriptisnotjava.com\" >> out/CNAME &&
   git add out/ &&
   git commit -m \"Deploy Next.js to gh-pages\" &&
   git push origin `git subtree split --prefix out -b gh-pages`:gh-pages --force"
