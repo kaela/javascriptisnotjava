@@ -14,7 +14,18 @@ cd javascriptisnotjava
 yarn dev
 ```
 
-## To build
+## Deploy Script
+
+When originally creating the site, change the end of the deploy command to:
+`git subtree push --prefix out origin gh-pages`
+
+Any time after, use:
+
+```
+git push origin `git subtree split --prefix out -b gh-pages`:gh-pages --force`
+```
+
+## Build
 
 Run `yarn build`
 
@@ -25,3 +36,10 @@ This project uses:
 - react
 - next.js
 - styled-components
+- github pages
+
+## Committing Changes
+
+- `git add...`
+- `git commit...`
+- `yarn deploy`
