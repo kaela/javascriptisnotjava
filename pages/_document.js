@@ -3,6 +3,9 @@ import Document, { Head, Main, NextScript } from "next/document";
 // TODO - injectGlobal not working
 import { ServerStyleSheet } from "styled-components";
 
+const GA_TRACKING_ID = "UA-61935120-1";
+const disableUserTracking = false;
+
 class CustomDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
@@ -18,6 +21,21 @@ class CustomDocument extends Document {
     return (
       <html>
         <Head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window['ga-disable-${GA_TRACKING_ID}'] = ${disableUserTracking};
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}');`
+            }}
+            nonce={nonce}
+          />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link
             href="https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond|Oswald:700"
