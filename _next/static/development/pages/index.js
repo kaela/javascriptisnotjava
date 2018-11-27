@@ -178,7 +178,7 @@ var Comments = function Comments() {
     shortname: "javascriptisnotjava",
     identifier: "thread",
     title: "Comments",
-    url: "http://javascriptisnotjava.io",
+    url: "http://javascriptisnotjava.com",
     onNewComment: handleNewComment,
     __source: {
       fileName: _jsxFileName,
